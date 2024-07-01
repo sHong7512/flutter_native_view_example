@@ -12,6 +12,7 @@ import io.flutter.plugin.common.StandardMessageCodec
 import io.flutter.plugin.platform.PlatformView
 import io.flutter.plugin.platform.PlatformViewFactory
 import io.flutter.plugins.GeneratedPluginRegistrant
+import com.example.native_view_example.SurfaceCapture
 
 class MainActivity : FlutterActivity() {
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
@@ -23,6 +24,7 @@ class MainActivity : FlutterActivity() {
                 "plugin/native_widget",
                 NativeViewFactory(flutterEngine.dartExecutor.binaryMessenger)
             )
+        SurfaceCapture().makeCustomChannel(flutterEngine.dartExecutor.binaryMessenger, activity)
     }
 }
 

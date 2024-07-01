@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:native_view_example/example_android_view.dart';
 import 'example_native_view.dart';
 
 class ExamplePage extends StatelessWidget {
@@ -12,7 +13,8 @@ class ExamplePage extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           color: Colors.grey,
-          child: ExampleNativeView(),
+          // child: ExampleNativeView(),
+          child: ExampleAndroidView(),
         ),
       ),
     );
